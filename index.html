@@ -1,0 +1,118 @@
+<!-- //create an html page for a todo application -->
+<!DocType html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>To-Do List App</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <h1>Todo App</h1>
+        <form action="/todo" method="POST">
+            <input type="text" id="task-input" placeholder="Enter task...">
+            <input type="submit" value="Add" id="add-btn" onclick="changeBackgroundColor()">
+            <dialog id="alert-dialog">
+                <p>Task cannot be empty! </p>
+            </dialog>
+        </form>
+        <ul id="task-list">
+
+        </ul>
+        <p>
+            <li class="action-1">
+                1 - What happend when the user type something inside the input form ? <button class="help-btn"
+                    id="info-bt-1" onclick="openDialog1()">Help</button>
+                <dialog class="help-dialog" id="info-dialog-1">
+                    <p>When the user types something inside the input form, an event listener is added to the HTML form
+                        element on the page.
+                        <br />
+                        <br />
+                        It listens for the "submit" event to occur when the user
+                        submits the form by clicking a button or pressing enter.
+                        <br />
+                        <br />
+                        When the event occurs, the function prevents the default form submission behavior, which would
+                        cause the page to reload.
+                        <br />
+                        <br />
+                        Instead, it calls the createTaskItem function and passes it the current value of the taskInput
+                        field as a parameter.
+                        <br />
+                        <br />
+                        The purpose of this function is to allow the user to submit a new task to the task list. By
+                        preventing the default form
+                        submission behavior, the page can remain interactive and update dynamically as the user
+                        interacts with it.
+                        <br />
+                        <br />
+                        on the taskInput element calls the function
+                        changeBackgroundColor() which changes the background color of the li element with class action-1
+                        to green, and sets a
+                        timeout of 5 seconds to reset the background color to white if the input field is empty.
+                    </p>
+                    <button class="help-btn" id="close-btn" onclick="closeDialog1()">Close</button>
+                </dialog>
+            </li>
+            <li class="action-2">
+                2 - What happend when the user clicks the Add button? <button class="help-btn" id="info-bt-2"
+                    onclick="openDialog2()">Help</button>
+                <dialog class="help-dialog" id="info-dialog-2">
+                    <p>When you click on the <b>add button</b>, the function createTaskItem() is called with the value
+                        of the taskInput element as the
+                        argument.
+                        <br />
+                        <br />
+                        The function creates a new li element and adds a span and a button element to it, sets
+                        their text content and
+                        attributes, and adds event listeners to the button and span elements.
+                        <br />
+                        <br />
+                        The function then adds the
+                        li element to the
+                        taskList element and resets the value of the taskInput element to an empty string.
+                        <br /><br />
+                        Additionally, the function changeBackgroundColor() is called, which changes the background color
+                        of the li element with
+                        class action-2 to green, and sets a timeout of 5 seconds to reset the background color to white
+                        if the input field is
+                        empty.<br /><br />
+
+                        The event listener on the taskInput element also changes the background color of the li element
+                        with class action-1 to
+                        green every time the input value changes, and resets the background color to white if the input
+                        field is empty.
+                    </p>
+                    <button class="help-btn" id="close-btn" onclick="closeDialog2()">Close</button>
+                </dialog>
+            </li>
+
+            <li class="action-3">
+                3 - What happend when the user clicks the delete button? <button class="help-btn" id="info-bt-3"
+                    onclick="openDialog3()">Help</button>
+            </li>
+            <li class="action-4">
+                4 - What happend when the user clicks the task name? <button class="help-btn" id="info-bt-4"
+                    onclick="openDialog4()">Help</button>
+            </li>
+            <li class="action-5">
+                5 - What happend when the user clicks the edit button? <button class="help-btn" id="info-bt-5"
+                    onclick="openDialog5()">Help</button>
+            </li>
+            <li class="action-6">
+                6 - What happend when the user clicks the save button? <button class="help-btn" id="info-bt-6"
+                    onclick="openDialog6()">Help</button>
+
+            </li>
+            <li class="action-7">
+                7 - What happend when the user clicks the cancel button? <button class="help-btn" id="info-bt-7"
+                    onclick="openDialog7()">Help</button>
+            </li>
+
+        </p>
+
+
+        <script src="app.js"></script>
+
+</html>
