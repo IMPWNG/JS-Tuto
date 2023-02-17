@@ -63,12 +63,15 @@ function createTaskItem(taskName) {
   const taskNameSpan = document.createElement("span");
   const deleteButton = document.createElement("button");
   const editButton = document.createElement("button");
+  //edit button blackground color is green 
+
 
   // Set the text content and attributes of the HTML elements
   taskNameSpan.textContent = taskName;
   deleteButton.textContent = "Delete";
   editButton.textContent = "Edit";
   editButton.style.backgroundColor = "green";
+  deleteButton.style.backgroundColor = "red";
 
   // Add a click event listener to the delete button
   deleteButton.addEventListener("click", () => {

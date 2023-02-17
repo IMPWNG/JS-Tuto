@@ -82,25 +82,6 @@ li span {
   margin-right: 10px;
 }
 
-li button {
-  background-color: #EF4444;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-li button.edit-btn {
-  background-color: #FBBF24;
-  margin-right: 10px;
-}
-
-li button:hover {
-  background-color: #DC2626;
-}
-
 li.completed {
   background-color: #DBEAFE;
   text-decoration: line-through;
