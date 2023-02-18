@@ -72,6 +72,9 @@ function createTaskItem(taskName) {
   editButton.textContent = "Edit";
   editButton.style.backgroundColor = "green";
   deleteButton.style.backgroundColor = "red";
+  editButton.style.marginRight = "10px";
+
+
 
   // Add a click event listener to the delete button
   deleteButton.addEventListener("click", () => {
@@ -84,8 +87,8 @@ function createTaskItem(taskName) {
 
   // Add the task item elements to the task item and the task item to the task list
   taskItem.appendChild(taskNameSpan);
-  taskItem.appendChild(deleteButton);
   taskItem.appendChild(editButton); 
+  taskItem.appendChild(deleteButton);
   taskList.appendChild(taskItem);
 
   // Reset the input field
